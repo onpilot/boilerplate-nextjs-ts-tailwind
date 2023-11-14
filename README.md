@@ -57,7 +57,7 @@ Addition:
 I recommend you to install commitizen on your machine globally
 
 ```bash
-npm install -g commitizen
+npm install -g commitizen czg
 ```
 
 So you can simply use `git cz`, `git-cz` or just `cz` instead of _git commit_
@@ -117,6 +117,10 @@ Don't forget to change the package name in package.json
 This starter is using
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is
 mandatory to use it to commit changes.
+
+### 6. Release Please Action
+
+You may need to set "Allow GitHub Actions to create and approve pull requests" under repository Settings > Actions > General.
 
 # Attribution
 
