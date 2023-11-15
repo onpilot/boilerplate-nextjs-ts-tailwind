@@ -47,3 +47,27 @@ jobs:
 
       - name: 🔎 Type check
         run: npm run typecheck
+
+  dependency:
+    # https://github.com/actions/dependency-review-action/blob/main/docs/examples.md
+
+    # Using the comment-summary-in-pr you can get the results of the action in the PR as a comment. In order for this to work, the action needs to be able to create a comment in the PR. This requires additional pull-requests: write permission.
+
+    # Using the allow-dependencies-licenses you can exclude dependencies from the license check.
+    # The values should be provided in purl format. In this example, we are excluding lodash from npm from the license check
+    name: 🖇 Dependency Review
+    runs-on: ubuntu-latest
+    needs: [lint, typecheck]
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+      - name: 🖇 Dependency Review
+        uses: actions/dependency-review-action@v3
+        with:
+          fail-on-severity: critical
+          deny-licenses: LGPL-2.0, BSD-2-Clause
+          comment-summary-in-pr: always
+          allow-dependencies-licenses: 'pkg:npm/lodash'

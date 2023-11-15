@@ -10,14 +10,16 @@ module.exports = {
 
   rules: {
     'no-console': 'warn',
-    // '@typescript-eslint/explicit-module-boundary-types': 'off',
-    // 'react/no-unescaped-entities': 'off',
 
-    // 'react/display-name': 'off',
-    // 'react/jsx-curly-brace-presence': [
-    //   'warn',
-    //   { props: 'never', children: 'never' },
-    // ],
+    // Use escaped characters judiciously, mainly when necessary for security or specific display purposes.
+    // For example, displaying <script> tags as &lt;script&gt; prevents them from being executed as code in HTML.
+    'react/no-unescaped-entities': 'warn',
+
+    // https://github.com/forem/forem/issues/12643
+    'react/jsx-curly-brace-presence': [
+      'error',
+      { props: 'never', children: 'never' },
+    ],
 
     //#region  //*=========== Unused Import ===========
     '@typescript-eslint/no-unused-vars': 'off', // or "no-unused-vars": "off",
