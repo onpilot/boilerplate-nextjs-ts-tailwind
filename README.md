@@ -51,6 +51,7 @@ Original features that has been preserved:
 Addition:
 
 ```
+- 👷 Github Actions — Add Dependency Review action on PR
 - 💁‍♂️ Conventional Commit Prompt — Enable commit via terminal prompt using `commitizen` + `cz-git` that follows your commit message configuration.
 ```
 
@@ -120,7 +121,8 @@ mandatory to use it to commit changes.
 
 ### 6. Release Please Action
 
-You may need to set "Allow GitHub Actions to create and approve pull requests" under repository Settings > Actions > General.
+You may need to set "Allow GitHub Actions to create and approve pull requests"
+under repository Settings > Actions > General.
 
 # Attribution
 
