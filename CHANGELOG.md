@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/onpilot/boilerplate-nextjs-ts-tailwind/compare/v1.0.0...v2.0.0) (2023-12-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update deps
+
+### Build System
+
+* Update deps ([9b67e53](https://github.com/onpilot/boilerplate-nextjs-ts-tailwind/commit/9b67e5341b58f193e0193ccb07c2838e344533c6))
+
 ## 1.0.0 (2023-11-15)
 
 
